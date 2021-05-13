@@ -22,6 +22,8 @@ class Coord:
     def __str__(self):
         return "<Coord.{}>".format(self.__dict__)
 
+    def __repr__(self):
+        return "<Coord.{}>".format(self.__dict__)
 
 class Grid:
     def __init__(self, name, coord, **kwargs):
@@ -31,6 +33,9 @@ class Grid:
             setattr(self, k, v)
 
     def __str__(self):
+        return "<Grid.{}>".format(self.__dict__)
+
+    def __repr__(self):
         return "<Grid.{}>".format(self.__dict__)
 
 class GRIDDESC:
@@ -78,9 +83,10 @@ class GRIDDESC:
                 cells = []
                 for c in griddesc_lines[i].split():
                     c = c.strip("', ")
-                    if c.isnumeric():
+                    try:
+                        print(c)
                         cells.append(ast.literal_eval(c))
-                    else:
+                    except Exception as e:
                         cells.append(c)
 
                 key = eval(line)
