@@ -3,8 +3,12 @@
 # version: 1.0
 # author: Fennel
 # contact: gongkangjia@gmail.com
-# date: 2021/5/13
+# date: 2021/5/28
 
-from .read_girddesc import GRIDDESC
 
-__version__ = "0.1.1"
+def get_proj(grid):
+    pass
+
+
+def get_map(grid):
+    pass

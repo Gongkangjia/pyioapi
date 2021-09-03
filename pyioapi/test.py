@@ -7,8 +7,8 @@
 
 
 class Mydict(dict):
-    def __init__(self,*args,**kwargs):
-        super().__init__(*args,**kwargs)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
     def __getitem__(self, item):
         print(item)
